@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { customerAPI } from '../services/api';
-import './Dashboard.css';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { customerAPI } from "../services/api";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoPerson } from "react-icons/io5";
+import { IoMdAddCircle } from "react-icons/io";
+import { PiEyesFill } from "react-icons/pi";
+
+import "./Dashboard.css";
 
 const Dashboard = () => {
   const [stats, setStats] = useState({
     totalCustomers: 0,
     totalAddresses: 0,
-    recentCustomers: []
+    recentCustomers: [],
   });
   const [loading, setLoading] = useState(true);
 
@@ -17,11 +22,14 @@ const Dashboard = () => {
         const response = await customerAPI.getAll({ limit: 5, page: 1 });
         setStats({
           totalCustomers: response.data.pagination.total,
-          totalAddresses: response.data.data.reduce((sum, customer) => sum + customer.address_count, 0),
-          recentCustomers: response.data.data.slice(0, 5)
+          totalAddresses: response.data.data.reduce(
+            (sum, customer) => sum + customer.address_count,
+            0
+          ),
+          recentCustomers: response.data.data.slice(0, 5),
         });
       } catch (error) {
-        console.error('Error fetching dashboard stats:', error);
+        console.error("Error fetching dashboard stats:", error);
       } finally {
         setLoading(false);
       }
@@ -43,14 +51,18 @@ const Dashboard = () => {
 
       <div className="stats-grid">
         <div className="stat-card">
-          <div className="stat-icon">👥</div>
+          <div className="stat-icon">
+            <IoPerson className="icon" />
+          </div>
           <div className="stat-content">
             <h3>{stats.totalCustomers}</h3>
             <p>Total Customers</p>
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">📍</div>
+          <div className="stat-icon">
+            <FaLocationDot className="icon" />
+          </div>
           <div className="stat-content">
             <h3>{stats.totalAddresses}</h3>
             <p>Total Addresses</p>
@@ -65,10 +77,13 @@ const Dashboard = () => {
             {stats.recentCustomers.map((customer) => (
               <div key={customer.id} className="recent-item">
                 <div className="recent-info">
-                  <h4>{customer.first_name} {customer.last_name}</h4>
+                  <h4>
+                    {customer.first_name} {customer.last_name}
+                  </h4>
                   <p>{customer.phone_number}</p>
                   <span className="address-badge">
-                    {customer.address_count} address{customer.address_count !== 1 ? 'es' : ''}
+                    {customer.address_count} address
+                    {customer.address_count !== 1 ? "es" : ""}
                   </span>
                 </div>
                 <Link to={`/customers/${customer.id}`} className="btn-view">
@@ -91,12 +106,16 @@ const Dashboard = () => {
         <h2>Quick Actions</h2>
         <div className="action-grid">
           <Link to="/customers/new" className="action-card">
-            <div className="action-icon">➕</div>
+            <div className="action-icon">
+              <IoMdAddCircle style={{ color: "#1d4ed8", fontSize: "60px" }} />
+            </div>
             <h3>Add Customer</h3>
             <p>Create a new customer profile</p>
           </Link>
           <Link to="/customers" className="action-card">
-            <div className="action-icon">👀</div>
+            <div className="action-icon">
+              <PiEyesFill style={{ color: "#1d4ed8", fontSize: "60px" }} />
+            </div>
             <h3>View All</h3>
             <p>Browse all customers and addresses</p>
           </Link>

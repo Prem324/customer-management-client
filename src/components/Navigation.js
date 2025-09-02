@@ -1,14 +1,29 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import './Navigation.css';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./Navigation.css";
+import { GoHomeFill } from "react-icons/go";
+import { IoPerson } from "react-icons/io5";
+import { IoMdAddCircle } from "react-icons/io";
 
 const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { path: '/', label: 'Dashboard', icon: '🏠' },
-    { path: '/customers', label: 'Customers', icon: '👥' },
-    { path: '/customers/new', label: 'Add Customer', icon: '➕' },
+    {
+      path: "/",
+      label: "Dashboard",
+      icon: <GoHomeFill style={{ fontSize: "26px" }} />,
+    },
+    {
+      path: "/customers",
+      label: "Customers",
+      icon: <IoPerson style={{ fontSize: "26px" }} />,
+    },
+    {
+      path: "/customers/new",
+      label: "Add Customer",
+      icon: <IoMdAddCircle style={{ fontSize: "26px" }} />,
+    },
   ];
 
   return (
@@ -20,9 +35,11 @@ const Navigation = () => {
         <ul className="nav-menu">
           {navItems.map((item) => (
             <li key={item.path} className="nav-item">
-              <Link 
-                to={item.path} 
-                className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
+              <Link
+                to={item.path}
+                className={`nav-link ${
+                  location.pathname === item.path ? "active" : ""
+                }`}
               >
                 <span className="nav-icon">{item.icon}</span>
                 {item.label}

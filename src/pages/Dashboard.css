@@ -10,14 +10,14 @@
 }
 
 .dashboard-header h1 {
-  color: #1F2937;
+  color: #1f2937;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .dashboard-header p {
-  color: #6B7280;
+  color: #6b7280;
   font-size: 1.1rem;
   margin: 0;
 }
@@ -47,7 +47,7 @@
 
 .stat-icon {
   font-size: 2.5rem;
-  background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
   border-radius: 50%;
   width: 70px;
   height: 70px;
@@ -56,25 +56,31 @@
   justify-content: center;
 }
 
+.icon {
+  color: white;
+}
+
 .stat-content h3 {
-  color: #1F2937;
+  color: #1f2937;
   font-size: 2rem;
   font-weight: 700;
   margin: 0;
 }
 
 .stat-content p {
-  color: #6B7280;
+  color: #6b7280;
   font-size: 0.9rem;
   margin: 0.25rem 0 0 0;
 }
 
-.recent-section, .quick-actions {
+.recent-section,
+.quick-actions {
   margin-bottom: 3rem;
 }
 
-.recent-section h2, .quick-actions h2 {
-  color: #1F2937;
+.recent-section h2,
+.quick-actions h2 {
+  color: #1f2937;
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -91,7 +97,7 @@
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  border: 1px solid #E5E7EB;
+  border: 1px solid #e5e7eb;
   display: flex;
   justify-content: between;
   align-items: center;
@@ -108,20 +114,20 @@
 }
 
 .recent-info h4 {
-  color: #1F2937;
+  color: #1f2937;
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 0.25rem 0;
 }
 
 .recent-info p {
-  color: #6B7280;
+  color: #6b7280;
   margin: 0.25rem 0;
 }
 
 .address-badge {
-  background: #EFF6FF;
-  color: #1D4ED8;
+  background: #eff6ff;
+  color: #1d4ed8;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-size: 0.8rem;
@@ -129,7 +135,7 @@
 }
 
 .btn-view {
-  background: #10B981;
+  background: #10b981;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -159,7 +165,7 @@
   color: inherit;
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid #E5E7EB;
+  border: 1px solid #e5e7eb;
 }
 
 .action-card:hover {
@@ -172,40 +178,40 @@
 .action-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .action-card h3 {
-  color: #1F2937;
+  color: #1f2937;
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
 }
 
 .action-card p {
-  color: #6B7280;
+  color: #6b7280;
   margin: 0;
 }
 
 .no-customers {
   text-align: center;
   padding: 3rem 2rem;
-  background: #F9FAFB;
+  background: #f9fafb;
   border-radius: 12px;
-  border: 2px dashed #D1D5DB;
+  border: 2px dashed #d1d5db;
 }
 
 .no-customers p {
-  color: #6B7280;
+  color: #6b7280;
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
 
 .btn-primary {
-  background: #3B82F6;
+  background: #3b82f6;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -221,7 +227,7 @@
 }
 
 .btn-primary:hover {
-  background: #2563EB;
+  background: #2563eb;
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
   text-decoration: none;
@@ -232,13 +238,13 @@
   text-align: center;
   padding: 4rem 2rem;
   font-size: 1.1rem;
-  color: #6B7280;
+  color: #6b7280;
 }
 
 .error-message {
-  background: #FEF2F2;
-  border: 1px solid #FECACA;
-  color: #DC2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -249,15 +255,16 @@
   .dashboard-container {
     padding: 1rem;
   }
-  
+
   .dashboard-header h1 {
     font-size: 2rem;
   }
-  
-  .stats-grid, .action-grid {
+
+  .stats-grid,
+  .action-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .recent-item {
     flex-direction: column;
     text-align: center;
