@@ -1,0 +1,158 @@
+.customer-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.customer-header {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customer-info h1 {
+  color: #1F2937;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.phone-number {
+  color: #3B82F6;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.created-date {
+  color: #6B7280;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.customer-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-edit {
+  background: #F59E0B;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-edit:hover {
+  background: #D97706;
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: white;
+}
+
+.btn-delete {
+  background: #EF4444;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+  background: #DC2626;
+  transform: translateY(-1px);
+}
+
+.breadcrumb {
+  margin-bottom: 1rem;
+  color: #6B7280;
+  font-size: 0.9rem;
+}
+
+.breadcrumb a {
+  color: #3B82F6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.error-container, .loading-container {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.error-container h2 {
+  color: #DC2626;
+  margin-bottom: 1rem;
+}
+
+.error-container p {
+  color: #6B7280;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  background: #3B82F6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background: #2563EB;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.loading-container {
+  font-size: 1.1rem;
+  color: #6B7280;
+}
+
+@media (max-width: 768px) {
+  .customer-detail-container {
+    padding: 1rem;
+  }
+  
+  .customer-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .customer-info h1 {
+    font-size: 1.5rem;
+  }
+  
+  .customer-actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
