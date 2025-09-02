@@ -1,6 +1,44 @@
-# Getting Started with Create React App
+# Customer Management App - Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend React application for the Customer Management System. It provides a user interface for managing customer information and their addresses.
+
+## Features
+
+- **Dashboard**: Overview of customer statistics and recent activities
+- **Customer Management**: Create, view, update, and delete customer information
+- **Address Management**: Add, edit, and remove customer addresses
+- **Search & Filter**: Find customers by name, phone number, or city
+
+## Project Structure
+
+```
+src/
+├── components/       # Reusable UI components
+│   ├── AddressForm   # Form for creating/editing addresses
+│   ├── AddressList   # Display list of addresses
+│   ├── CustomerForm  # Form for creating/editing customers
+│   ├── CustomerList  # Display list of customers
+│   └── Navigation    # App navigation bar
+├── pages/            # Application pages
+│   ├── Dashboard     # Main dashboard view
+│   ├── CustomerListPage    # List of all customers
+│   ├── CustomerDetailPage  # Detailed view of a customer
+│   └── CustomerFormPage    # Create/edit customer form
+├── services/         # API and service functions
+│   └── api.js        # API client for backend communication
+└── App.js           # Main application component with routing
+```
+
+## Technologies Used
+
+- **React**: Frontend library for building user interfaces
+- **React Router**: For navigation and routing
+- **Axios**: HTTP client for API requests
+- **CSS**: Styling components
+
+## API Integration
+
+The application communicates with the backend server using RESTful API endpoints. The API service is configured in `src/services/api.js`.
 
 ## Available Scripts
 
@@ -8,63 +46,19 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Ensure you have Node.js installed
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start`
+4. Make sure the backend server is running

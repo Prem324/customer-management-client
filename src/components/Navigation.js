@@ -30,7 +30,14 @@ const Navigation = () => {
     <nav className="navigation">
       <div className="nav-container">
         <div className="nav-brand">
-          <h1>Customer Management</h1>
+          <h1>
+            <Link
+              to="/"
+              style={{ color: "white", textDecoration: "none", border: "none" }}
+            >
+              Customer Management
+            </Link>
+          </h1>
         </div>
         <ul className="nav-menu">
           {navItems.map((item) => (
